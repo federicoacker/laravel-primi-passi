@@ -1,10 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\PasswordGenerator;
 
-Route::get('/password', function() {
+Route::get('/password', function () {
     $message = "Grazie per averci scelto";
-    return view('password', compact("message"));
+
+    $passwordGenerator = new PasswordGenerator();
+    $password = $passwordGenerator->generatePassword();
+
+    return view('password', compact(["message", "password"]));
 })->name("password");
 
 Route::get('/', function () {
