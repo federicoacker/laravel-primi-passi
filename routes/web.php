@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/password', function() {
-    return view('password');
-});
+    $message = "Grazie per averci scelto";
+    return view('password', compact("message"));
+})->name("password");
 
 Route::get('/', function () {
     return view('home');
-});
+})->name("index");

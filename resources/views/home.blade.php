@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    
     <div class="container">
         <div class="row justify-content-center h-100 align-items-center">
             <div class="col-md-6">
@@ -21,7 +22,7 @@
                         </div>
                         <div class="form-control">
                             <label class="form-label" for="length">Password Length (Required)</label>
-                            <input required type="number" id="length" name="length" value = "5"/>
+                            <input required type="number" id="length" name="length" value="5" />
                         </div>
                         <button class="btn btn-danger">Genera Password</button>
                     </div>
