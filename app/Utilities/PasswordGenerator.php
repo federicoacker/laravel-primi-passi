@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Utilities;
 class PasswordGenerator
 {
     public bool $uppercase = false;
