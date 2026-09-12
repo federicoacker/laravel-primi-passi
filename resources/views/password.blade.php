@@ -26,15 +26,13 @@ function generatePassword($uppercase, $numbers, $symbols, $length)
 
     do {
         $randomSelector = rand(0, 3);
-        $randomChar = $lowercaseChars[rand(0, strlen($lowercaseChars)-1)];
-        if ($randomSelector == 0) {
-            $randomChar = $lowercaseChars[rand(0, strlen($lowercaseChars)-1)];
-        } else if ($uppercase && $randomSelector == 1) {
-            $randomChar = $uppercaseChars[rand(0, strlen($uppercaseChars)-1)];
+        $randomChar = $lowercaseChars[rand(0, strlen($lowercaseChars) - 1)];
+        if ($uppercase && $randomSelector == 1) {
+            $randomChar = $uppercaseChars[rand(0, strlen($uppercaseChars) - 1)];
         } else if ($numbers && $randomSelector == 2) {
-            $randomChar = $numberChars[rand(0, strlen($numberChars)-1)];
+            $randomChar = $numberChars[rand(0, strlen($numberChars) - 1)];
         } else if ($symbols && $randomSelector == 3) {
-            $randomChar = $symbolChars[rand(0, strlen($symbolChars)-1)];
+            $randomChar = $symbolChars[rand(0, strlen($symbolChars) - 1)];
         }
 
         $password .= $randomChar;
@@ -48,7 +46,7 @@ $password = generatePassword($uppercase, $numbers, $symbols, $_GET['length']);
 ?>
 
 @section('content')
-<div class="container">
+    <div class="container">
         <div class="row justify-content-center vh-100 align-items-center">
             <div class="col-md-6">
                 <div class="card" data-bs-theme="dark">
